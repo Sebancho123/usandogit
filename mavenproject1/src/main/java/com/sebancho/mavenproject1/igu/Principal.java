@@ -1,9 +1,13 @@
 
 package com.sebancho.mavenproject1.igu;
 
+import java.util.Scanner;
+
 
 public class Principal extends javax.swing.JFrame {
 
+    int sumando1;
+    int sumando2;
     
     public Principal() {
         initComponents();
@@ -32,8 +36,18 @@ public class Principal extends javax.swing.JFrame {
         jLabel1.setText("Sumas");
 
         txtSumando1.setFont(new java.awt.Font("Dialog", 0, 36)); // NOI18N
+        txtSumando1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtSumando1ActionPerformed(evt);
+            }
+        });
 
         txtSumando2.setFont(new java.awt.Font("Dialog", 0, 36)); // NOI18N
+        txtSumando2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtSumando2ActionPerformed(evt);
+            }
+        });
 
         jLabel2.setFont(new java.awt.Font("Dialog", 0, 24)); // NOI18N
         jLabel2.setText("+");
@@ -43,9 +57,19 @@ public class Principal extends javax.swing.JFrame {
 
         txtResultado.setEditable(false);
         txtResultado.setFont(new java.awt.Font("Dialog", 0, 36)); // NOI18N
+        txtResultado.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtResultadoActionPerformed(evt);
+            }
+        });
 
         btnSumar.setFont(new java.awt.Font("Dialog", 0, 18)); // NOI18N
         btnSumar.setText("Sumar");
+        btnSumar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnSumarActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -110,6 +134,30 @@ public class Principal extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void txtSumando1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtSumando1ActionPerformed
+        int sumando1;
+        
+        Scanner pantalla = new Scanner(System.in);
+        pantalla.nextInt();
+    }//GEN-LAST:event_txtSumando1ActionPerformed
+
+    private void txtSumando2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtSumando2ActionPerformed
+        int sumando2;
+        Scanner pantalla2 = new Scanner(System.in);
+        pantalla2.nextInt();
+    }//GEN-LAST:event_txtSumando2ActionPerformed
+
+    private void txtResultadoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtResultadoActionPerformed
+        
+    }//GEN-LAST:event_txtResultadoActionPerformed
+
+    private void btnSumarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSumarActionPerformed
+        int resultado;
+        resultado = sumando1 + sumando2;
+        txtResultado.setColumns(resultado);
+        
+    }//GEN-LAST:event_btnSumarActionPerformed
 
     
 
